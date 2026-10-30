@@ -21,3 +21,8 @@ body.training-active .feedback{margin-top:10px;min-height:20px;text-align:center
 body.training-active .memory-actions{margin:8px 0}
 @media(max-width:540px){body.training-active .answer-row{gap:8px}body.training-active .session-top{font-size:14px;align-items:flex-start}body.training-active .session-controls .subtle{font-size:11px;padding:7px}body.training-active .session{padding:12px}}
 @media(max-height:680px){body.training-active .session{padding:8px 12px}body.training-active .prompt{font-size:25px;padding:8px 0}body.training-active .answer-row input,body.training-active .answer-row button{min-height:40px;padding:7px}}
+
+/* v4: larger, easier-to-tap input controls. Native OS keyboard size is not web-configurable. */
+body.training-active .answer-row input{font-size:clamp(24px,6vw,30px);min-height:60px;padding:15px 17px}
+body.training-active .answer-row button{font-size:19px;min-height:56px;padding:14px 16px}
+@media(max-height:680px){body.training-active .answer-row input{min-height:54px;padding:10px 14px}body.training-active .answer-row button{min-height:50px;padding:10px}}
