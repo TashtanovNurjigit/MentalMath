@@ -41,3 +41,26 @@ body.training-active .answer-row input{min-height:48px;padding:8px 14px}
 body.training-active .answer-row button{min-height:48px;padding:8px 14px}
 body.training-active .feedback{margin-top:6px;min-height:18px;font-size:12px}
 @media(max-height:740px){.keypad{gap:6px;padding-top:5px}.keypad button{min-height:clamp(46px,7dvh,60px)}body.training-active .session-meta{margin:6px 0}body.training-active .prompt{font-size:clamp(22px,5vw,30px)}body.training-active .hint{margin:3px 0}body.training-active .session{padding:8px 10px}}
+
+/* v6: Fit all twelve keypad buttons inside the actual mobile viewport. */
+body.training-active .shell{height:100dvh;max-height:100dvh;padding:6px 10px max(6px,env(safe-area-inset-bottom));}
+body.training-active main,body.training-active #home{min-height:0;height:100%;}
+body.training-active .session{height:100%;min-height:0;padding:10px 12px;overflow:hidden;display:flex;flex-direction:column;}
+body.training-active .session-top{flex:0 0 auto;gap:6px;flex-wrap:wrap;}
+body.training-active .session-controls{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;}
+body.training-active .session-controls button{padding:7px 8px;font-size:12px;}
+body.training-active .session-meta{flex:0 0 auto;margin:8px 0 6px;}
+body.training-active .progress{flex:0 0 6px;}
+body.training-active .prompt{flex:0 0 auto;min-height:0;padding:clamp(8px,2dvh,16px) 2px 4px;font-size:clamp(24px,5vw,36px);}
+body.training-active .memory-actions{flex:0 0 auto;margin:4px 0;}
+body.training-active .hint{flex:0 0 auto;margin:4px 0;min-height:0;}
+body.training-active #answerForm{flex:0 0 auto;margin-top:4px;}
+body.training-active #answerForm label{margin-bottom:5px;}
+body.training-active .answer-row{gap:6px;}
+body.training-active .answer-row input{min-height:44px;padding:8px 12px;font-size:clamp(20px,5vw,26px);}
+body.training-active .answer-row button{min-height:44px;padding:8px 12px;font-size:17px;}
+body.training-active .keypad:not([hidden]){flex:1 1 auto;min-height:0;max-height:360px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:clamp(5px,1dvh,9px);margin-top:clamp(6px,1dvh,12px);padding-top:0;}
+body.training-active .keypad button{min-height:0;height:100%;font-size:clamp(24px,5vw,32px);border-radius:12px;}
+body.training-active .feedback{flex:0 0 auto;min-height:16px;margin-top:4px;}
+body.training-active #nextBtn{flex:0 0 auto;}
+@media(max-height:650px){body.training-active .shell{padding-top:2px}body.training-active .session{padding:5px 8px}body.training-active .prompt{padding:4px 2px;font-size:23px}body.training-active .session-meta{margin:4px 0}body.training-active .answer-row input,body.training-active .answer-row button{min-height:38px;padding:5px}body.training-active .keypad:not([hidden]){gap:4px;margin-top:4px}body.training-active .session-controls button{padding:4px 6px}}
